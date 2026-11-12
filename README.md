@@ -40,6 +40,8 @@ To replace these with your own SVGs, see the final section of this README.
 
 Merge [`claude_settings.json`](claude_settings.json) into your `~/.claude/settings.json` to wire the hooks that invoke `src/hook.py`.
 
+The file assumes the project lives at `~/Projects/tools/status-indicator`. If you clone it elsewhere, replace `$HOME/Projects/tools/status-indicator` in your `~/.claude/settings.json` with the actual path.
+
 ### How it works
 
 The app follows a two-component model:
