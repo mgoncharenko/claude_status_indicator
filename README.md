@@ -38,45 +38,7 @@ To replace these with your own SVGs, see the final section of this README.
 
 ## Claude Code Hooks
 
-Create (or merge) a `~/.claude/settings.json` with these hooks that invoke `src/hook.py`:
-
-```json
-{
-  "hooks": {
-    "SessionStart":     [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "PreToolUse":       [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "PostToolUse":      [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "Stop":             [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "StopFailure":      [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "SessionEnd":       [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "Notification":     [
-                           { "matcher": "permission_prompt|idle_prompt", "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }
-                         ]
-  }
-}
-```
-
-Replace `$HOME/Projects/tools/status-indicator` with the actual path to your cloned copy. If you prefer a `~/.claude/settings.json` template, you can also import it from this project's [`claude_settings.json`](claude_settings.json).
-
-```json
-{
-  "hooks": {
-    "SessionStart":     [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "PreToolUse":       [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "PostToolUse":      [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "Stop":             [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "StopFailure":      [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "SessionEnd":       [{ "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }],
-    "Notification":     [
-                           { "matcher": "permission_prompt|idle_prompt", "hooks": [{ "type": "command", "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py" }] }
-                         ]
-  }
-}
-```
-
-Replace `$HOME/Projects/tools/status-indicator` with the actual path to your cloned copy.
+Merge [`claude_settings.json`](claude_settings.json) into your `~/.claude/settings.json` to wire the hooks that invoke `src/hook.py`.
 
 ### How it works
 
