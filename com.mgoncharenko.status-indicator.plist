@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mgoncharenko.status-indicator</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/uv</string>
+        <string>run</string>
+        <string>status-indicator</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>~/Projects/tools/status-indicator</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.mgoncharenko.status-indicator.err.log</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.mgoncharenko.status-indicator.out.log</string>
+</dict>
+</plist>

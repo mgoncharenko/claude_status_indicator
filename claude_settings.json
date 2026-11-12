@@ -1,0 +1,86 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/Projects/tools/status-indicator/.venv/bin/python $HOME/Projects/tools/status-indicator/src/hook.py"
+          }
+        ]
+      }
+    ]
+  }
+}
+

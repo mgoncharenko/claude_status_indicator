@@ -1,0 +1,25 @@
+[project]
+name = "status-indicator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mykhailo Goncharenko", email = "goncharenko.m@ajax.systems" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "cairosvg>=2.9.1",
+    "pillow>=13.0.0",
+    "rumps>=0.4.0",
+]
+
+[project.scripts]
+status-indicator    = "app:main"      # GUI menu-bar app (primary entry point)
+status-indicator-hk   = "hook:main"   # CLI hook (reads JSON from stdin)
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
