@@ -16,8 +16,6 @@ A macOS menu-bar icon that reflects [Claude Code](https://claude.ai/code)'s runt
    uv sync
    ```
 
-> **Project location:** This README assumes the project lives at `~/Projects/tools/status-indicator`. If you clone it elsewhere, update the command paths in the hooks JSON below to match your actual location.
-
 ## Iconography
 
 The app ships with 11 pre-bundled 40×40 PNG icons in `assets/icons/`, rendered from Lucide SVGs. The following table maps each Claude Code status to its icon, color, and original Lucide name:
@@ -40,7 +38,7 @@ To replace these with your own SVGs, see the final section of this README.
 
 ## Claude Code Hooks
 
-To wire the indicator into Claude Code, add hooks that invoke `src/hook.py` for each event you want to track. Create (or merge) a `.claude/claude_settings.json` alongside this project's root:
+To wire the indicator into Claude Code, add hooks that invoke `src/hook.py` for each event you want to track. Create (or merge) a `~/.claude/settings.json` with:
 
 ```json
 {
